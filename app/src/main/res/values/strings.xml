@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kimi Code Control</string>
+    <string name="widget_label">Kimi 状态</string>
+
+    <!-- 连接页 -->
+    <string name="connect_subtitle">连接 Termux 中的 kimi web 服务后进入控制台</string>
+    <string name="field_host">主机地址</string>
+    <string name="field_port">端口</string>
+    <string name="field_port_invalid">端口范围 1–65535</string>
+    <string name="field_token">访问令牌（Token）</string>
+    <string name="field_token_support">在 Termux 中运行 cat ~/.kimi-code/server.token 获取；若服务以 --dangerous-bypass-auth 启动则留空</string>
+    <string name="advanced_options">高级选项</string>
+    <string name="dnd_foreground_title">App 在前台时静默完成提醒</string>
+    <string name="dnd_foreground_support">打开控制台时，任务完成不再弹通知</string>
+    <string name="dnd_min_duration_title">仅提醒运行超过 5 分钟的任务</string>
+    <string name="dnd_all_tasks">提醒所有任务完成</string>
+    <string name="dnd_min_duration_support">短任务完成保持安静，避免频繁打扰</string>
+    <string name="btn_test">测试连接</string>
+    <string name="btn_enter">连接并进入控制台</string>
+    <string name="decrease">减少</string>
+    <string name="increase">增加</string>
+    <string name="status_testing">正在测试连接…</string>
+    <string name="status_ok">服务在线 · 版本 %1$s</string>
+    <string name="status_unreachable">无法连接：请确认 Termux 中已运行 kimi web</string>
+    <string name="status_need_token">服务需要访问令牌（Token）</string>
+    <string name="status_port_found">在端口 %1$d 发现服务，已自动填入</string>
+    <string name="status_scanning">正在扫描端口…</string>
+    <string name="notification_permission_hint">需要通知权限以发送审批与完成提醒</string>
+    <string name="connect_termux_hint">Termux 侧：kimi web --no-open\n令牌：cat ~/.kimi-code/server.token</string>
+
+    <!-- 控制台 -->
+    <string name="console_title">控制台</string>
+    <string name="console_state_connected">已连接</string>
+    <string name="console_state_connecting">正在连接服务器…</string>
+    <string name="console_state_disconnected">未连接</string>
+    <string name="console_server_info">%1$s · v%2$s</string>
+    <string name="console_stat_running">运行中</string>
+    <string name="console_stat_approval">待审批</string>
+    <string name="console_stat_sessions">会话总数</string>
+    <string name="console_section_approvals">待审批 · %1$d</string>
+    <string name="console_section_questions">待回答 · %1$d</string>
+    <string name="console_section_sessions">会话动态</string>
+    <string name="console_question_title">Kimi 有问题问你</string>
+    <string name="console_question_hint">控制台后续版本将支持在此直接回答</string>
+    <string name="console_session_idle">空闲</string>
+    <string name="console_sessions_empty">暂无会话 —— 连接建立后将实时同步</string>
+    <string name="console_coming_soon">控制台 · 建设中</string>
+    <string name="console_future_hint">会话终端、文件浏览、任务管理等模块正在规划开发，敬请期待。</string>
+    <string name="console_module_terminal">会话终端</string>
+    <string name="console_module_files">文件浏览</string>
+    <string name="console_module_tasks">任务管理</string>
+    <string name="console_menu_refresh">刷新状态</string>
+    <string name="console_menu_change_server">更改服务器</string>
+
+    <!-- 通知 -->
+    <string name="channel_approval_name">审批提醒</string>
+    <string name="channel_approval_desc">工具调用等待你的批准时震动提醒，锁屏可直接操作</string>
+    <string name="channel_question_name">问题提醒</string>
+    <string name="channel_question_desc">Kimi 向你提问时提醒</string>
+    <string name="channel_completion_name">任务完成</string>
+    <string name="channel_completion_desc">任务结束时提醒（受防打扰策略控制）</string>
+    <string name="channel_work_name">工作状态</string>
+    <string name="channel_work_desc">Kimi 正在工作时的常驻状态通知</string>
+    <string name="channel_task_banner_name">任务横幅</string>
+    <string name="channel_task_banner_desc">任务运行时在屏幕顶部以横幅展示实时状态（划走后保留在通知栏，任务结束自动移除）</string>
+    <string name="channel_task_bg_name">其他运行任务</string>
+    <string name="channel_task_bg_desc">多个任务同时运行时，较晚任务在通知栏常驻展示实时状态</string>
+    <string name="notif_approval_title">等待审批 · %1$s</string>
+    <string name="notif_approval_act_approve">允许</string>
+    <string name="notif_approval_act_approve_session">本次会话均允许</string>
+    <string name="notif_approval_act_reject">拒绝</string>
+    <string name="notif_question_title">Kimi 有问题问你</string>
+    <string name="notif_question_act_open">打开回答</string>
+    <string name="notif_completed_done">任务完成 · %1$s</string>
+    <string name="notif_completed_failed">任务失败 · %1$s</string>
+    <string name="notif_completed_cancelled">任务已取消 · %1$s</string>
+    <string name="notif_work_running">Kimi 正在工作 · 已运行 %1$s</string>
+    <string name="notif_work_idle">Kimi 待命中</string>
+    <string name="notif_work_connecting">正在连接 Kimi Code…</string>
+    <string name="notif_work_disconnected">与 Kimi Code 的连接已断开</string>
+    <!-- v0.5.2 工作通知详细模式 / 任务实时通知 -->
+    <string name="notif_work_detailed_single">Kimi 正在工作 · %1$s</string>
+    <string name="notif_work_detailed_multi">Kimi 正在工作 · %1$d 个任务</string>
+    <string name="notif_task_default_title">Kimi 任务</string>
+    <string name="notif_task_todo">Todo %1$d/%2$d</string>
+    <string name="notif_task_swarm">Swarm 子代理 %1$d 个</string>
+    <string name="notif_task_goal">目标：%1$s</string>
+
+    <!-- 小组件 -->
+    <string name="widget_state_thinking">思考中 · Thinking</string>
+    <string name="widget_state_shell">执行命令 · Shell</string>
+    <string name="widget_state_write">写文件 · Write</string>
+    <string name="widget_state_tool">执行工具 · %1$s</string>
+    <string name="widget_state_approval">等待审批 · Approval</string>
+    <string name="widget_state_idle">空闲 · Idle</string>
+    <string name="widget_state_offline">未连接 · Offline</string>
+    <string name="widget_tasks_running">%1$d 个任务进行中</string>
+    <string name="widget_tasks_running_todo">%1$d 个任务 · Todo %2$d/%3$d</string>
+    <string name="widget_no_tasks">没有进行中的任务</string>
+    <string name="widget_tap_to_open">点按打开控制台</string>
+
+    <!-- 审批操作 -->
+    <string name="approval_sheet_title">等待审批的操作</string>
+    <string name="approval_btn_approve">允许</string>
+    <string name="approval_btn_approve_session">本次会话均允许</string>
+    <string name="approval_btn_reject">拒绝</string>
+    <string name="approval_done">已处理</string>
+
+    <!-- 会话状态徽标（控制台/通用） -->
+    <string name="picker_badge_busy">运行中</string>
+    <string name="picker_badge_approval">待审批</string>
+    <string name="picker_badge_question">待回答</string>
+
+    <string name="error_no_server">尚未配置服务器</string>
+
+    <!-- v0.5 控制台（单页简洁布局） -->
+    <string name="usage_title">套餐用量</string>
+    <string name="usage_5h">近 5 小时</string>
+    <string name="usage_7d">近 7 天</string>
+    <string name="usage_month">本月用量</string>
+    <string name="usage_month_code">本月 Code</string>
+    <string name="usage_booster">加油包</string>
+    <string name="usage_unavailable">用量信息暂不可用</string>
+    <string name="usage_loading">正在获取用量…</string>
+    <string name="usage_reset_at">%1$s 重置</string>
+    <string name="tasks_title">最近任务</string>
+    <string name="tasks_empty">暂无任务正在进行</string>
+    <string name="phase_thinking">思考中</string>
+    <string name="phase_shell">执行命令</string>
+    <string name="phase_write">写文件</string>
+    <string name="phase_tool">执行工具 · %1$s</string>
+    <string name="phase_tool_generic">执行工具</string>
+    <string name="phase_todo_updating">更新待办</string>
+    <string name="phase_approval">等待审批</string>
+    <string name="phase_question">等待回答</string>
+    <string name="phase_idle">空闲</string>
+
+    <!-- v0.5 任务详情页 -->
+    <string name="detail_back">返回</string>
+    <string name="detail_title">任务详情</string>
+    <string name="detail_loading">加载中…</string>
+    <string name="detail_no_data">暂无数据</string>
+    <string name="detail_token_usage">Token 用量</string>
+    <string name="detail_current_turn">本轮</string>
+    <string name="detail_total">累计</string>
+    <string name="detail_input_output">输入 %1$s · 输出 %2$s</string>
+    <string name="detail_context">上下文</string>
+    <string name="detail_thinking_effort">思考 %1$s</string>
+    <string name="detail_ai_status">AI 状态</string>
+    <string name="detail_todo">Todo · %2$d / %1$d</string>
+    <string name="detail_todo_empty">暂无待办事项</string>
+    <string name="detail_goal">Goal 目标</string>
+    <string name="detail_goal_none">未设置目标（可在 Termux 中以 goal 模式发起）</string>
+    <string name="detail_goal_active">进行中</string>
+    <string name="detail_goal_paused">已暂停</string>
+    <string name="detail_goal_blocked">受阻</string>
+    <string name="detail_goal_complete">已完成</string>
+    <string name="detail_goal_stats">已用 %1$d 轮 · %2$s tokens</string>
+    <string name="detail_goal_criterion">完成标准：%1$s</string>
+    <string name="detail_goal_budget">预算 %1$d%% · %2$s / %3$s</string>
+    <string name="detail_goal_pause">暂停</string>
+    <string name="detail_goal_resume">恢复</string>
+    <string name="detail_goal_cancel">取消目标</string>
+    <string name="detail_modes">模式</string>
+    <string name="detail_mode_plan">Plan 模式</string>
+    <string name="detail_mode_plan_desc">先规划后执行，产出计划供确认</string>
+    <string name="detail_mode_swarm">Swarm 模式</string>
+    <string name="detail_mode_swarm_desc">多子代理并行协作执行任务</string>
+    <string name="detail_swarm_agents">Swarm 子代理 · %1$d</string>
+    <string name="subagent_working">工作中</string>
+    <string name="subagent_suspended">已挂起</string>
+    <string name="subagent_completed">已完成</string>
+    <string name="subagent_failed">失败</string>
+    <string name="subagent_cancelled">已取消</string>
+    <string name="subagent_usage">用量 %1$s</string>
+
+    <!-- v0.5.7 设置页（主页 + 分类子页结构） -->
+    <string name="settings_title">设置</string>
+    <string name="settings_more_coming">更多设置类别将在后续版本加入</string>
+    <string name="settings_version_footer">%1$s · v%2$s</string>
+    <string name="settings_notify_entry_title">通知</string>
+    <string name="settings_notify_entry_desc">任务状态横幅、工作状态展示与各类提醒</string>
+    <string name="settings_notify_title">通知</string>
+    <string name="settings_section_status">运行状态</string>
+    <string name="settings_section_reminders">提醒</string>
+    <string name="settings_section_permission">权限</string>
+    <string name="settings_banner_title">任务状态横幅</string>
+    <string name="settings_banner_desc">任务运行时在屏幕顶部以横幅通知实时展示进度（工具调用 / 思考 / Todo / Swarm / Goal）；横幅划走后保留在通知栏，任务结束自动移除。多任务并行时优先展示最早开始的任务。</string>
+    <string name="settings_work_mode_title">工作状态通知</string>
+    <string name="settings_work_mode_desc">前台监控服务的常驻通知（保持连接所必需，不可关闭，可切换展示样式）</string>
+    <string name="settings_work_mode_minimal">极简通知</string>
+    <string name="settings_work_mode_minimal_desc">仅在通知栏常驻显示「正在工作 · 已运行 X 分钟」（原通知样式，保持不变）</string>
+    <string name="settings_work_mode_detailed">悬浮窗面板</string>
+    <string name="settings_work_mode_detailed_desc">以可拖动的悬浮窗面板实时展示工具调用、思考状态、Todo 进度等（胶囊 / 卡片两种形态），需悬浮窗权限</string>
+    <string name="settings_approval_title">审批提醒</string>
+    <string name="settings_approval_desc">Kimi 等待你批准工具调用时提醒，可在通知或提示卡上直接处理</string>
+    <string name="settings_question_title">问题提醒</string>
+    <string name="settings_question_desc">Kimi 向你提问时提醒，可快速打开应用回答</string>
+    <string name="settings_completion_title">任务完成提醒</string>
+    <string name="settings_completion_desc">任务结束 / 失败 / 取消时提醒（受防打扰策略控制）</string>
+    <string name="console_menu_settings">设置</string>
+
+    <!-- v0.5.2 任务详情页 AI 状态增强 -->
+    <string name="detail_running_for">已运行 %1$s</string>
+    <string name="detail_ai_todo_chip">Todo %1$d/%2$d</string>
+    <string name="detail_ai_swarm_chip">Swarm %1$d</string>
+    <string name="detail_ai_thinking_stream">思考流</string>
+
+    <!-- v0.5.4 最近任务两栏（进行中 / 已完成） -->
+    <string name="tasks_section_active">进行中</string>
+    <string name="tasks_section_done">已完成</string>
+    <string name="task_done_completed">已完成</string>
+    <string name="task_done_failed">已失败</string>
+    <string name="task_done_cancelled">已取消</string>
+
+    <!-- v0.5.4 工作状态悬浮窗（详细模式） -->
+    <string name="notif_work_service_running">Kimi Code 监控运行中</string>
+    <string name="float_more">更多</string>
+    <string name="float_form_capsule">胶囊形态</string>
+    <string name="float_form_card">卡片形态</string>
+    <string name="float_exit">退出</string>
+    <string name="float_task_running">任务正在进行</string>
+    <string name="float_task_multi">%1$d 个任务运行中</string>
+    <string name="float_running_for">已运行 %1$s</string>
+    <string name="float_todo">Todo %1$d/%2$d</string>
+    <string name="float_swarm">Swarm %1$d</string>
+    <string name="float_goal">目标：%1$s</string>
+    <string name="float_other_tasks">其他任务</string>
+
+    <!-- v0.5.4 悬浮窗权限（设置页） -->
+    <string name="settings_overlay_title">悬浮窗权限</string>
+    <string name="settings_overlay_desc">悬浮窗面板与悬浮窗提示卡需授予「显示在其他应用上层」权限</string>
+    <string name="settings_overlay_granted">已授权，悬浮窗功能可用</string>
+    <string name="settings_overlay_grant">去授权</string>
+
+    <!-- v0.5.9 样式设置（主页「样式」子页） -->
+    <string name="settings_style_entry_title">样式</string>
+    <string name="settings_style_entry_desc">主题配色、MD3 动态取色与模糊动效</string>
+    <string name="settings_style_title">样式</string>
+    <string name="settings_style_section_theme">主题色</string>
+    <string name="settings_style_dynamic_title">MD3 动态取色</string>
+    <string name="settings_style_dynamic_desc">跟随系统壁纸自动配色（Material You），需 Android 12 及以上；关闭后可在下方选择经典配色</string>
+    <string name="settings_style_dynamic_unavailable">当前系统不支持动态取色（需 Android 12+），可直接使用下方经典配色</string>
+    <string name="settings_style_palette_title">经典配色</string>
+    <string name="settings_style_palette_desc">四种经典主题配色，关闭动态取色后生效</string>
+    <string name="settings_style_palette_locked">关闭「MD3 动态取色」后可选择</string>
+    <string name="settings_palette_indigo">靛蓝</string>
+    <string name="settings_palette_emerald">翠绿</string>
+    <string name="settings_palette_amber">琥珀</string>
+    <string name="settings_palette_rose">玫瑰</string>
+    <string name="settings_style_section_effects">动效</string>
+    <string name="settings_style_blur_title">减少模糊</string>
+    <string name="settings_style_blur_desc">开启时全局无附加模糊；关闭后顶栏变为高斯动态毛玻璃、界面切换带景深模糊，页面更精致（Android 12+ 生效）</string>
+    <string name="settings_style_blur_state_off">当前：保持简洁，无附加模糊效果</string>
+    <string name="settings_style_blur_state_on">当前：已启用高斯动态毛玻璃顶栏与切换动态模糊</string>
+
+    <!-- v0.5.5 提醒通道（设置页）：全部悬浮窗 / 全部通知 -->
+    <string name="settings_reminder_channel_title">提醒方式</string>
+    <string name="settings_reminder_channel_desc">审批、问题与任务完成提醒的呈现方式</string>
+    <string name="settings_reminder_floating">悬浮窗提示卡</string>
+    <string name="settings_reminder_floating_desc">提示卡在屏幕角落弹出，可直接允许 / 拒绝 / 回答，无需进入应用</string>
+    <string name="settings_reminder_floating_desc_need_grant">以提示卡弹出，可直接处理；尚未授予悬浮窗权限，选择后将前往授权</string>
+    <string name="settings_reminder_notification">系统通知</string>
+    <string name="settings_reminder_notification_desc">以系统通知横幅提醒，点击进入应用处理</string>
+
+    <!-- v0.5.5 悬浮窗提示卡（审批 / 问题 / 完成提醒） -->
+    <string name="float_collapse">收起为胶囊</string>
+    <string name="float_prompt_approval_title">等待你的审批</string>
+    <string name="float_prompt_question_title">Kimi 想问你</string>
+    <string name="float_prompt_completion_title">任务完成</string>
+    <string name="float_prompt_allow">允许</string>
+    <string name="float_prompt_reject">拒绝</string>
+    <string name="float_prompt_allow_session">本会话均允许</string>
+    <string name="float_prompt_open_app">打开应用回答</string>
+    <string name="float_prompt_dismiss">忽略</string>
+    <string name="float_prompt_open_detail">查看详情</string>
+    <string name="float_prompt_no_summary">（无详细内容）</string>
+    <string name="float_prompt_done">运行了 %1$s，结果已就绪</string>
+    <string name="float_prompt_failed">任务异常结束，请查看失败原因</string>
+    <string name="float_prompt_cancelled">任务已取消</string>
+
+    <!-- v0.5.3: Kimi Code 官方状态文案（英文原文逐字移植，来源 MoonshotAI/kimi-code） -->
+    <!-- 主状态机（kimi-tui.ts）/ 思考流（thinking.ts） -->
+    <string name="ks_idle">Idle</string>
+    <string name="ks_thinking">Thinking…</string>
+    <string name="ks_thinking_lower">thinking…</string>
+    <string name="ks_working">Working…</string>
+    <!-- 工具卡片（tool-call.ts buildHeader） -->
+    <string name="ks_running_command">Running a command · $ %1$s</string>
+    <string name="ks_ran_command">Ran a command</string>
+    <string name="ks_using_tool">Using %1$s (%2$s)</string>
+    <string name="ks_using_tool_noarg">Using %1$s</string>
+    <string name="ks_used_tool">Used %1$s (%2$s)</string>
+    <string name="ks_used_tool_noarg">Used %1$s</string>
+    <string name="ks_using_mcp">Using %1$s · MCP/%2$s</string>
+    <string name="ks_used_mcp">Used %1$s · MCP/%2$s</string>
+    <!-- Read 分组（read-group.ts） -->
+    <string name="ks_reading_files">Reading %1$d files…</string>
+    <string name="ks_read_files">Read %1$d files</string>
+    <!-- 专属工具头（tool-call.ts） -->
+    <string name="ks_waiting_input">Waiting for your input</string>
+    <string name="ks_collected_answers">Collected your answers</string>
+    <string name="ks_starting_bg_question">Starting background question</string>
+    <string name="ks_sending_update">Sending you an update</string>
+    <string name="ks_current_plan">Current plan</string>
+    <string name="ks_waiting_bg_task">Waiting for background task</string>
+    <string name="ks_waiting_bg_task_id">Waiting for background task (%1$s)</string>
+    <string name="ks_waited_bg_task">Waited for background task</string>
+    <!-- Goal 工具（tool-renderers/goal.ts goalToolLabel） -->
+    <string name="ks_starting_goal">Starting goal</string>
+    <string name="ks_checking_goal">Checking goal</string>
+    <string name="ks_setting_goal_budget">Setting goal budget</string>
+    <string name="ks_reporting_goal">Reporting goal %1$s</string>
+    <!-- Todo 工具（VS Code ToolRenderers.tsx getToolLabel） -->
+    <string name="ks_update_todos">Update Todos</string>
+    <!-- 重试（step-retry.ts formatStepRetryLabel） -->
+    <string name="ks_retrying">Retrying (%1$d/%2$d) · %3$s</string>
+    <string name="ks_retrying_in">Retrying (%1$d/%2$d) · %3$s · in %4$ds</string>
+    <!-- 审批（approval-panel.ts headerFor） -->
+    <string name="ks_approve_tool">Approve %1$s?</string>
+    <!-- 问题（kimi-tui.ts） -->
+    <string name="ks_needs_answer">Kimi Code needs your answer</string>
+    <!-- 中断（session-event-handler.ts） -->
+    <string name="ks_interrupted_by_user">Interrupted by user</string>
+    <string name="ks_max_steps">reached per-turn step limit (max_steps)</string>
+    <string name="ks_step_interrupted">step interrupted (%1$s)</string>
+    <!-- 子代理（agent-group.ts / agent-swarm-progress.ts） -->
+    <string name="ks_sub_starting">Starting</string>
+    <string name="ks_sub_running">Running</string>
+    <string name="ks_sub_rate_limited">Rate limited…</string>
+    <string name="ks_sub_completed">✓ Completed</string>
+    <string name="ks_sub_failed">✗ Failed</string>
+    <string name="ks_sub_aborted">Aborted.</string>
+    <!-- 子代理用量（tool-call.ts formatTokens） -->
+    <string name="ks_tokens">%1$s tok</string>
+</resources>

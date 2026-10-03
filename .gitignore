@@ -1,0 +1,20 @@
+# Build
+/build
+app/build
+/captures
+.externalNativeBuild
+.cxx
+
+# IDE
+*.iml
+.idea/
+local.properties
+
+# Signing（签名密钥绝不入库）
+keystore.properties
+*.keystore
+*.jks
+!gradle/wrapper/gradle-wrapper.jar
+
+# OS
+.DS_Store
